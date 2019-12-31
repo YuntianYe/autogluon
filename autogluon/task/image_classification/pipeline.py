@@ -46,6 +46,8 @@ def train_image_classification(args, reporter):
                                     args.tricks.use_se)
     distillation = target_kwargs.distillation
     net = target_kwargs.get_net
+    #net = model[name]
+    #model: dictionary of bunch of parameters
     input_size = net.input_size if hasattr(net, 'input_size') else args.input_size
 
     if args.tricks.no_wd:
