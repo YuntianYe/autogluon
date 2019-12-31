@@ -51,6 +51,8 @@ class TabularPrediction(BaseTask):
         output_directory = setup_outputdir(output_directory) # replace ~ with absolute path if it exists
         learner = Learner.load(output_directory)
         return TabularPredictor(learner=learner)
+    #tabularpredictor is equivalent to the estimator
+    #learner 
     
     @staticmethod
     def fit(train_data, label, tuning_data=None, output_directory=None, problem_type=None, eval_metric=None,
